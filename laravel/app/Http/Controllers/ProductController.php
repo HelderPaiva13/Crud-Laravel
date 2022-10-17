@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /* Vou criar o controlador conforme o tutorial abaixo
     https://techvblogs.com/blog/build-crud-app-with-laravel-and-reactjs
@@ -21,7 +21,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return ProductDB::select('id','tile','description','image')->get();
+        return Product::select('id','title','description','image')->get();
     }
 
     /**
@@ -133,7 +133,7 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Product $product)
     {
         //
     }
